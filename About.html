@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Divine Diamonds Jewellery House</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<link rel="stylesheet" media="all" href="css/style.css">	  
+    <link rel="stylesheet" media="all" href="css/style-2.css">	  
+</head>
+
+<script src="js/email-validation.js" defer></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script>
+	function toggleParagraph() {
+		var extraParagraph = document.getElementById("extraParagraph");
+		var readMoreLink = document.querySelector(".aboutus_readmore");
+		var readLessLink = document.querySelector(".aboutus_readless");
+		
+		if (extraParagraph.style.display === "none") {
+			extraParagraph.style.display = "block";
+			readMoreLink.style.display = "none";
+			readLessLink.style.display = "block";
+		} else {
+			extraParagraph.style.display = "none";
+			readMoreLink.style.display = "block";
+			readLessLink.style.display = "none";
+		}
+	}
+</script>
+<body>
+	<header id="header">
+		<div class="container">
+			<a href="index.html" id="logo"><img src="images/Logo.png" alt="Divine Diamonds Jewellery House"></a>
+			<div class="right-links">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="About.html">About US</a></li>
+					<li><a href="Jewellery.html">jewellery</a></li>
+					<li><a href="Contact.html">Contact us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+    <div id="body">
+        <div class="aboutus_container">
+            <img src="images/aboutus-img.webp">
+        </div>
+        <div class="aboutus_info">
+			<div class="aboutus_title">
+				ABOUT US
+			</div>
+			<p>Welcome to Divine Diamonds Jewellery House, where elegance meets craftsmanship. Founded with a passion for timeless beauty, we specialize in creating exquisite jewellery that tells a unique story. Our collections feature meticulously designed pieces crafted from the finest materials, ensuring each item is a masterpiece.</p>
+			<p>At Divine Diamonds Jewellery House, we believe that every piece should not only enhance your style but also become a cherished part of your story. Our artisans pour their hearts into every creation, blending traditional techniques with contemporary designs to offer you the best of both worlds.</p>
+			<p id="extraParagraph" style="display:none;">Discover the perfect blend of tradition and innovation with our stunning range of jewellery, and let us help you celebrate life's most precious moments.<br> Our commitment to quality and customer satisfaction is unparalleled. We invite you to explore our collections and experience the art of fine jewellery. From the sparkle of our diamonds to the elegance of our settings, every detail is meticulously curated to perfection. <strong> Divine Diamonds Jewellery House, we don't just sell jewellery; we create heirlooms that will be treasured for generations.</strong></p>	
+			<div>
+				<a href="#" class="aboutus_readmore" onclick="toggleParagraph(); return false;">READ MORE</a>
+				<a href="#" class="aboutus_readless" onclick="toggleParagraph(); return false;" style="display:none;">READ LESS</a>	
+			</div>
+        </div>
+    </div>  
+
+
+	<footer id="footer">
+		<div class="container">
+			<div class="cols">	
+				<div class="col media">
+					<h3>Social media</h3>
+					<ul class="social">
+						<li><img src="images/facebook-ko.svg" class="social_icon"><a href="#">Facebook</a></li>
+						<li><img src="images/instagram-ko.svg" class="social_icon"><a href="#">Instagram</a></li>
+						<li><img src="images/twitter-ko.svg" class="social_icon"><a href="#">Twitter</a></li>
+						<li><img src="images/pinterest-ko.svg" class="social_icon"><a href="#">Pinterest</a></li>						
+					</ul>
+				</div>
+				<div class="col contact">
+					<h3>Contact us</h3>
+					<p>Divine Diamonds Jewellery <br>390 North Front Street<br>ON, Candada</p>
+					<p><img src="images/email.png"><a href="#">contact@divinediamonds.ca</a></p>
+					<p><img src="images/contact.png"> +1(905)-746-4967</p>
+				</div>
+				<div class="col newsletter">
+					<h3>Join our newsletter</h3>
+					<form id="emailForm">
+						<input type="email" id="email" name="email" placeholder="Your email address">
+						<span id="emailError" class="error-message"></span>
+						<span id="successMessage" class="success-message"></span>
+						<button type="submit"></button>
+					</form>
+				</div>
+			</div>
+			<p class="copy">Copyright © 2024 Divine Diamonds - All Rights Reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>

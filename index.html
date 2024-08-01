@@ -7,11 +7,7 @@
 	<link rel="stylesheet" media="all" href="css/style.css">	
 </head>
 
-<script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/email-validation.js" defer></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
 
 <body>
 	<header id="header">
@@ -49,6 +45,8 @@
 		<div class="index_container">
 			<div class="last-products">
 				<h2>The Big Summer Sale</h2>
+				<div class="slider-container">
+				<button class="arrow slider-left-arrow">&#10094;</button>
 				<section class="products">
 					<summer>
 						<img src="images/Summer_Sale.png">
@@ -111,8 +109,11 @@
 						<a href="#" class="btn-add">Add to cart</a>
 					</summer>
 				</section>
+				<button class="arrow slider-right-arrow">&#10095;</button>
+				</div>
 			</div>	
 		</div>
+		<script src="js/slider.js"></script>
 		<div class="index-offer">
 			<section class="offer">
 				<div class="image-container">
@@ -148,9 +149,8 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<script src="js/popup.js"></script>
-
 		<div class="celebration">
 			<h2>A MEMORY TO BE TREASURED, A MOMENT TO BE MARKED, A GIFT WITH MEANING</h2>
 			<img src="images/Desktop_Birthday.png" alt="Birthday Image">
@@ -190,34 +190,8 @@
             </div>
         </div>		
 	</div>
-
-	<script>
-        $(document).ready(function(){
-            let testimonials = $('.testimonial');
-            let currentIndex = 0;
-
-            function showTestimonial(index) {
-                testimonials.hide();
-                testimonials.eq(index).fadeIn();
-            }
-
-            function nextTestimonial() {
-                currentIndex = (currentIndex + 1) % testimonials.length;
-                showTestimonial(currentIndex);
-            }
-
-            function prevTestimonial() {
-                currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-                showTestimonial(currentIndex);
-            }
-
-            $('.next').click(nextTestimonial);
-            $('.prev').click(prevTestimonial);
-
-            showTestimonial(currentIndex);
-            setInterval(nextTestimonial, 5000); // Change testimonial every 3 seconds
-        });
-    </script>
+	
+	<script src="js/testimonial.js"></script>
 
 <footer id="footer">
 	<div class="container">

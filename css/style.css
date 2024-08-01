@@ -187,6 +187,7 @@ a:hover {
 	background: #000;
 }
 
+
 #slider .bx-pager {
 	position: absolute;
 	bottom: 10px;
@@ -260,6 +261,18 @@ a:hover {
     width: 100%;
 	overflow: hidden;
 }
+.slider-container {
+    position: relative;
+    width: 1200px; 
+    overflow: hidden;
+	text-align: center;
+	
+}
+.slider-container .products {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
 
 .last-products {
 	border: 1px solid #d3d3d3; 
@@ -277,65 +290,37 @@ a:hover {
 	border-top: 0;
 	border-bottom: 0;
 	height: 350px;
+	width: 100%;
+	text-align: center;
 }
+
 
 .last-products img{
 	height: 30%;
 	width: 40%;
 }
 
-.last-products .bx-next:after {
-	content: "";
+.slider-left-arrow,
+.slider-right-arrow {
 	position: absolute;
-	right: 0;
-	margin: 11px 17px;
-	top: 0;
-	background: url(../images/ico_arrows.png) no-repeat 100% 0;
-	width: 8px;
-	height: 16px;
-	display: block;
+    top: 30%; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 5px; 
+    font-size: 1.5rem; 
+    cursor: pointer;
+    z-index: 1;
 }
 
-.last-products .bx-next {
-	position: absolute;
-	top: 16px;
-	right: 17px;
-	width: 101px;
-	height: 40px;
-	display: block;
-	text-indent: -999em;
-	border: 1px solid #d3d3d3;
+.slider-left-arrow {
+    left: 10px; 
 }
 
-.last-products .bx-prev:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	margin: 11px 17px;
-	top: 0;
-	background: url(../images/ico_arrows.png) no-repeat;
-	width: 8px;
-	height: 16px;
-	display: block;
+.slider-right-arrow {
+    right: 10px;
 }
-
-.last-products .bx-prev {
-	position: absolute;
-	top: 16px;
-	right: 134px;
-	width: 101px;
-	height: 40px;
-	display: block;
-	text-indent: -999em;
-	border: 1px solid #d3d3d3;
-}
-
-.last-products .bx-prev:hover, .last-products .bx-next:hover{
-	background: #d3d3d3;
-	color: #fff;
-	text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}  
 
 .index-offer{
 	display: flex;
@@ -500,11 +485,7 @@ a:hover {
     text-align: center;
     padding: 20px;
 }
-.testcontainer h2 {
-	color: #0d0b0bf2;
-	font-size: x-large;
-	font-weight: bold;	
-  }
+
   .testimonial-slider {
     position: relative;
     width: 80%;
@@ -519,6 +500,11 @@ a:hover {
     position: relative;
 }
 
+.testcontainer h2 {
+	color: #0d0b0bf2;
+	font-size: x-large;
+	font-weight: bold;	
+  }
 .testimonial {
     display: none;
     background-color: #f8f8f8;
@@ -563,6 +549,8 @@ h2 {
 .next {
     right: 10px;
 }
+
+
 
 /* ----Jelwlry page---- */
 #content {
@@ -868,6 +856,30 @@ h1 {
         align-items: stretch;
 		padding-bottom: 0px;
 	}
+	.slider-container {
+        width: 100%; 
+        max-width: none;
+    }
+	.slider-container .products {
+        flex-direction: column; 
+        width: 100%; 
+    }
+	.slider-container .product-item {
+        flex: 0 0 100%; 
+    }
+	.slider-left-arrow,
+    .slider-right-arrow {
+        padding: 5px; 
+        font-size: 1.2rem; 
+        top: 45%; 
+    }
+	.slider-left-arrow {
+        left: 10px; 
+    }
+
+    .slider-right-arrow {
+        right: 10px;
+    }
 	.last-products h2 {
         font-size:20px;
         text-align: center;
@@ -886,17 +898,7 @@ h1 {
         margin: 0 auto;
         display: block;
     }
-	.last-products .bx-next, .last-products .bx-prev {
-        width: 50px;
-        height: 35px;
-    }
-	.last-products .bx-next {
-        right: 17px;
-    }
-
-    .last-products .bx-prev {
-        right: 80px;
-    }
+	
 	.extra-offer-text {	 
 		font-size: 12px; 
 		animation-name: rotation;
@@ -941,7 +943,7 @@ h1 {
         width: 90%;
 		margin-bottom: 15px;
     }
-.popup-inner {
+	.popup-inner {
         flex-direction: column;
         align-items: center;
     }
@@ -1042,6 +1044,28 @@ h1 {
         flex-direction: column;
         align-items: stretch;
     }
+	.slider-container {
+        width: 100%; 
+        max-width: none;
+    }
+	 .slider-container .product-item {
+        flex: 0 0 33.33%; 
+    }
+	.slider-left-arrow,
+    .slider-right-arrow {
+        padding: 8px; 
+        font-size: 1.5rem;
+        top: 45%; 
+    }
+    
+    .slider-left-arrow {
+        left: 15px; 
+    }
+
+    .slider-right-arrow {
+        right: 15px; 
+    }
+
 	.last-products h2 {
         font-size: larger;
         text-align: center;
@@ -1059,24 +1083,8 @@ h1 {
 	.last-products .bx-viewport {
 		width: 466px !important;
 	}
-
-	.last-products .bx-next, .last-products .bx-prev {
-        width: 60px;
-        height: 40px;
-        top: auto;
-        bottom: 16px;
-    }
-	
-	.last-products .bx-next {
-        right: 17px;
-    }
-
-    .last-products .bx-prev {
-        right: 100px;
-    }
-
 	.extra-offer-text {	 
-		font-size: 20px; 
+		font-size: 10px; 
 		animation-name: rotation;
 		animation-duration: 4s; 
 		animation-iteration-count: infinite;

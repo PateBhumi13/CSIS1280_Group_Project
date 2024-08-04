@@ -478,7 +478,10 @@ a:hover {
     margin-top: 20px;
     border-radius: 5px;
 }
-
+.popup-count{
+	font-weight: bolder;
+	font-size: larger;
+}
 
 /* testimonial */
 .testcontainer {
